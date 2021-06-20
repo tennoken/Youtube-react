@@ -1,13 +1,60 @@
+:root {
+  --color-light-gray: #e9ecef;
+  --color-mid-gray: #adb5bd;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-mid-gray);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-light-gray);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-light-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
+  margin: 2rem 0;
 }
 
-.title {
-  margin-right: 20px;
+.youtubeLogo {
+  margin-right: 2rem;
+  width: 150px;
 }
 
 .input {
-  height: 30px;
+  width: 400px;
+  height: 36px;
+  border: 1px solid var(--color-light-gray);
+  padding-left: 12px;
+}
+
+.button {
+  height: 36px;
+  border: 1px solid var(--color-light-gray);
+  width: 80px;
+  background-color: #fff;
+  border-left: none;
+  cursor: pointer;
 }
