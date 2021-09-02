@@ -1,6 +1,6 @@
-import "./app.css";
-import Search from "./components/search";
-import VideoList from "./components/videoList";
+import './app.css';
+import Search from './components/search';
+import VideoList from './components/videoList';
 
 function App() {
   return (

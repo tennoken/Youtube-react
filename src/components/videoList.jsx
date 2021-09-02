@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import VideoItem from './videoItem';
+
 import styles from './videoList.module.css';
 
 const popularVideoListApiKey =
@@ -21,13 +23,7 @@ const VideoList = () => {
     <>
       <ul className={styles.ul}>
         {popularVideoList.map((videoItem) => (
-          <li key={videoItem.id} className={styles.li}>
-            <img
-              src={videoItem.snippet.thumbnails.medium.url}
-              alt="thumbnail"
-            />
-            <h1 className={styles.title}>{videoItem.snippet.title}</h1>
-          </li>
+          <VideoItem key={videoItem.id} item={videoItem.snippet} />
         ))}
       </ul>
     </>
