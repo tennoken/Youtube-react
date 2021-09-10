@@ -8,7 +8,7 @@ const VideoItem = ({ video }) => {
       <img src={video.thumbnails.medium.url} alt="thumbnail" />
       <div>
         <p className={styles.title}>{video.title}</p>
-        <p>{video.channelTitle}</p>
+        <p className={styles.channelTitle}>{video.channelTitle}</p>
       </div>
     </li>
   );
