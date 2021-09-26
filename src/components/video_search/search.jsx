@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './search.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Search = ({ onSearch }) => {
+const Search = memo(({ onSearch }) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -42,6 +42,6 @@ const Search = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default Search;
